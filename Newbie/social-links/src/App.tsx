@@ -38,7 +38,7 @@ export default function App() {
 				</div>
 				<div className="flex flex-col gap-4">
 					{socials.map(({ provider }) => (
-						<button className="w-full py-3 font-bold rounded-lg bg-grey-700">{provider}</button>
+						<button className="w-full py-3 font-bold rounded-lg hover:bg-green hover:text-grey-700 bg-grey-700">{provider}</button>
 					))}
 				</div>
 			</section>
