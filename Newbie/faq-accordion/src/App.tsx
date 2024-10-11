@@ -1,3 +1,7 @@
 export default function App () {
-	return <main></main>
+	return <main>
+		<div>
+			<h1 className="font-worksans">Hello World</h1>
+		</div>
+		</main>
 }
