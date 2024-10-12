@@ -35,6 +35,7 @@ export default function Accordion({ items = [] }: Props) {
 									}
 									height={30}
 									width={30}
+									alt="Toggle Icon"
 								/>
 							</div>
 						</div>
