@@ -42,7 +42,7 @@ export default function Accordion({ items = [] }: Props) {
 							className={`${
 								idx !== activeItem
 									? "opacity-0 grid-rows-[0fr]"
-									: "opacity-100 pb-1 pt-3 grid-rows-[1fr]"
+									: "opacity-100 pt-5 grid-rows-[1fr]"
 							} text-grayish-purple grid overflow-hidden transition-all duration-300`}
 						>
 							<p className="overflow-hidden">{content}</p>
