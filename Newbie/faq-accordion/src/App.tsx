@@ -6,13 +6,13 @@ export default function App() {
 
 
 	return (
-		<main className="bg-light-pink bg-[url('./assets/images/background-pattern-desktop.svg')] bg-no-repeat bg-top min-h-screen font-worksans flex justify-center items-center">
-			<section className="w-[600px] p-10 bg-white space-y-8 rounded-3xl">
+		<main className="bg-light-pink p-6 bg-[url('./assets/images/background-pattern-desktop.svg')] bg-no-repeat bg-top min-h-screen font-worksans flex justify-center items-center">
+			<section className="w-[600px] p-10 bg-white space-y-8 rounded-lg md:rounded-[20px]">
 				<div className="flex items-center gap-6">
 					<img
 						src={starIcon}
-						height={50}
-						width={50}
+						height={40}
+						width={40}
 						alt="Star Icon"
 					/>
 					<h1 className="text-6xl font-bold text-dark-purple">FAQs</h1>

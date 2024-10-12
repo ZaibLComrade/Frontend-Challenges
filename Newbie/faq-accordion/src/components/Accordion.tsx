@@ -12,37 +12,41 @@ export default function Accordion({ items = [] }: Props) {
 
 	return (
 		<div className="">
-			{items.map(({ title, content }, idx) => (
-				<Fragment>
+			{items.map(({ title, content, id }, idx) => (
+				<Fragment key={id}>
 					<div
 						className={`${
 							idx === items.length - 1 && "pb-0"
 						} group py-6`}
 						onClick={() => setActiveItem(idx)}
 					>
-						<div className="flex items-center justify-between">
+						<div className="flex items-center justify-between gap-4">
 							<h2
 								className={`text-lg font-bold text-dark-purple group-hover:text-active-pink`}
 							>
 								{title}
 							</h2>
-							<div>
+							<div className="min-w-[30px]">
 								<img
 									src={
 										idx === activeItem
 											? closeIcon
 											: openIcon
 									}
+									height={30}
+									width={30}
 								/>
 							</div>
 						</div>
-						<p
+						<div
 							className={`${
-								idx !== activeItem && "hidden"
-							} text-grayish-purple`}
+								idx !== activeItem
+									? "opacity-0 grid-rows-[0fr]"
+									: "opacity-100 pb-1 pt-3 grid-rows-[1fr]"
+							} text-grayish-purple grid overflow-hidden transition-all duration-300`}
 						>
-							{content}
-						</p>
+							<p className="overflow-hidden">{content}</p>
+						</div>
 					</div>
 					{idx !== items.length - 1 && <hr />}
 				</Fragment>
