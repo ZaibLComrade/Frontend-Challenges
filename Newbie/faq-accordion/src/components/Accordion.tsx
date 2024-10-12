@@ -15,11 +15,14 @@ export default function Accordion({ items = [] }: Props) {
 			{items.map(({ title, content }, idx) => (
 				<Fragment>
 					<div
-						className={`${idx === items.length - 1 && "pb-0"} py-6`}
+						className={`${
+							idx === items.length - 1 && "pb-0"
+						} group py-6`}
+						onClick={() => setActiveItem(idx)}
 					>
 						<div className="flex items-center justify-between">
 							<h2
-								className={`text-lg font-bold text-dark-purple hover:text-active-pink`}
+								className={`text-lg font-bold text-dark-purple group-hover:text-active-pink`}
 							>
 								{title}
 							</h2>
